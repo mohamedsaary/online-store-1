@@ -1,0 +1,313 @@
+
+/* MOBILE */
+body {
+    background-color: f3f3f3;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "btn-menu logo logo logo logo search user basket";
+}
+
+header #btn-menu {
+    grid-area: btn-menu;
+    align-self: center;
+    justify-self: center;
+
+    width: 32px;
+    height: 32px;
+
+    background-image: url(../icons/menu.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header .logo {
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+
+    text-decoration: none;
+
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header .nav-main {
+    display: none;
+}
+
+header .search {
+    grid-area: search;
+    align-self: center;
+    justify-self: center;
+    width: 16px;
+    height: 16px;
+}
+
+header .user {
+    grid-area: user;
+    align-self: center;
+    justify-self: center;
+    width: 16px;
+    height: 16px;
+}
+
+header .basket {
+    grid-area: basket;
+    align-self: center;
+    justify-self: center;
+    width: 16px;
+    height: 16px;
+}
+
+.wrapper-main {
+    width: 90%;
+    margin: 110px auto 50px auto; 
+}
+
+footer {
+    background-color: #575252;
+    color: 	#DCDCDC;
+    
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "about-us"
+    "help"
+    "contact"
+    "featured"
+    "footer-sm-links"
+    "copyright";    
+}
+
+footer .footer-block {
+    width: 100%;
+    height: fit-content;
+    padding: 10px auto;
+    border-bottom: 1px solid rgb(126, 124, 124);
+}
+
+footer .footer-block .footer-block-title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+
+footer .footer-block ul {
+    display: none;
+    height: fit-content;
+}
+
+footer .footer-block ul li {
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    padding: 5px 0;
+}
+
+footer .footer-block ul li a {
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    color: 	#DCDCDC;
+    font-size: 12px;
+}
+
+footer .footer-block p {
+    color: 	#DCDCDC;
+    font-size: 12px;
+    padding: 5px;
+    display: none;
+}
+
+footer .about-us {
+    grid-area: about-us;
+    justify-self: center;
+    align-self: center;
+}
+
+footer .help {
+    grid-area: help;
+    justify-self: center;
+    align-self: center;
+}
+
+footer .contact {
+    grid-area: contact;
+    justify-self: center;
+    align-self: center;
+}
+
+footer .featured {
+    grid-area: featured;
+    justify-self: center;
+    align-self: center;
+}
+
+footer .footer-sm-links {
+    grid-area: footer-sm-links;
+    justify-self: center;
+    align-self: center;
+
+    width: 100%;
+    height: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer .footer-sm-links a {
+    justify-self: center;
+    align-self: center;
+}
+
+footer .footer-sm-links a img {
+    width: 32px;
+    height: 32px;
+}
+
+.copyright {
+    grid-area: copyright;
+    justify-self: center;
+    align-self: center;
+
+    background-color: #111;
+    width: 100%;
+    height: 30px;
+
+    font-size: 12px;
+    line-height: 30px;
+    color: #808080;
+    text-align: center;
+}
+
+/*IPAD*/
+@media only screen and (min-width: 768px){
+    header .logo {
+        justify-self: start;
+    }
+}
+
+/*DESKTOP*/
+@media only screen and (min-width: 1025px){    
+    header {
+        height: 50px;
+        grid-template-columns: 25% 60% 5% 5% 5%;
+        grid-template-areas: "logo nav search user basket";
+    }
+    
+    header #btn-menu {
+        display: none;
+    }
+
+    header .logo {
+        justify-self: start;
+        font-size: 28px;
+        padding-left: 15px;
+    }    
+    
+    header .nav-main {
+        grid-area: nav;
+        justify-self: center;
+        align-self: center;
+
+        display: block;
+        width: 100%;
+    }
+
+    header .nav-main ul {
+        margin-left: 50px;
+    }
+
+    header .nav-main ul li {
+        display: inline-block;
+        list-style: none;
+    }
+    
+    header .nav-main ul li a {
+        display: block;
+        text-decoration: none;
+        
+        color: #111;
+        font-size: 13px;
+
+        padding: 10px;
+    }
+
+    header .nav-main ul li a:hover {
+        color: 	#FF8C00;
+    }
+    
+    .wrapper-main {
+        width: 90%;
+        margin: 80px auto 50px auto;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-areas: 
+        "about-us help contact featured footer-sm-links";
+        
+        padding: 30px 50px;
+    }
+
+    footer .footer-block {
+        border-bottom: none;
+    }
+
+    footer .footer-block .footer-block-title {
+        padding-bottom: 15px;
+        padding-left: 0;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    footer .footer-block ul {
+        display: block;
+    }
+
+    footer .footer-block ul li {
+        font-size: 12px;
+    }
+    
+    footer .footer-block p {
+        display: block;
+    }
+
+    footer .about-us, footer .help, footer .contact, footer .featured {
+        align-self: start;
+    }
+
+    footer .footer-sm-links {
+        margin-top: 60px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    footer .footer-sm-links a {
+        justify-self: center;
+        align-self: center;
+    }
+
+    footer .footer-sm-links a img {
+        width: 32px;
+        height: 32px;
+    }    
+    
+}
