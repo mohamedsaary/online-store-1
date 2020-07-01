@@ -9,6 +9,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
 
     background-color: #fff;
     width: 100%;
@@ -74,25 +75,59 @@ header .basket {
     height: 16px;
 }
 
+.nav-sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0 5px;
+  width: fit-content;
+  height: calc(100vh - 100px);
+  background-color: #111;
+  z-index: 1000;
+
+  display: none;
+}
+
+.nav-sidebar ul {
+  padding-top: 15px;
+}
+
+.nav-sidebar ul li {
+  list-style: none;
+}
+
+.nav-sidebar ul li a {
+  display: block;
+  height: 40px;
+  padding: 0 10px;
+  color: #f3f3f3;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-sidebar ul li a:hover{
+  color: 	#FF8C00;
+}
+
 .wrapper-main {
     width: 90%;
-    margin: 110px auto 50px auto; 
+    margin: 110px auto 50px auto;
 }
 
 footer {
     background-color: #575252;
     color: 	#DCDCDC;
-    
+
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 
+    grid-template-areas:
     "about-us"
     "help"
     "contact"
     "featured"
     "footer-sm-links"
-    "copyright";    
+    "copyright";
 }
 
 footer .footer-block {
@@ -204,13 +239,13 @@ footer .footer-sm-links a img {
 }
 
 /*DESKTOP*/
-@media only screen and (min-width: 1025px){    
+@media only screen and (min-width: 1025px){
     header {
         height: 50px;
         grid-template-columns: 25% 60% 5% 5% 5%;
         grid-template-areas: "logo nav search user basket";
     }
-    
+
     header #btn-menu {
         display: none;
     }
@@ -219,8 +254,8 @@ footer .footer-sm-links a img {
         justify-self: start;
         font-size: 28px;
         padding-left: 15px;
-    }    
-    
+    }
+
     header .nav-main {
         grid-area: nav;
         justify-self: center;
@@ -238,11 +273,11 @@ footer .footer-sm-links a img {
         display: inline-block;
         list-style: none;
     }
-    
+
     header .nav-main ul li a {
         display: block;
         text-decoration: none;
-        
+
         color: #111;
         font-size: 13px;
 
@@ -252,7 +287,7 @@ footer .footer-sm-links a img {
     header .nav-main ul li a:hover {
         color: 	#FF8C00;
     }
-    
+
     .wrapper-main {
         width: 90%;
         margin: 80px auto 50px auto;
@@ -260,9 +295,9 @@ footer .footer-sm-links a img {
 
     footer {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-        grid-template-areas: 
+        grid-template-areas:
         "about-us help contact featured footer-sm-links";
-        
+
         padding: 30px 50px;
     }
 
@@ -284,7 +319,7 @@ footer .footer-sm-links a img {
     footer .footer-block ul li {
         font-size: 12px;
     }
-    
+
     footer .footer-block p {
         display: block;
     }
@@ -308,6 +343,6 @@ footer .footer-sm-links a img {
     footer .footer-sm-links a img {
         width: 32px;
         height: 32px;
-    }    
-    
+    }
+
 }
