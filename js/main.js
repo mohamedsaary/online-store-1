@@ -29,9 +29,9 @@ let expandSearchBar = function () {
 
         //Search Button
         searchButton = document.createElement('button'); 
-        searchButton.style.backgroundImage = "url(../icons/search.png)";
+        searchButton.style.backgroundImage = "url(icons/search.png)";
         searchButton.style.backgroundPosition = "center";
-        searchButton.style.backgroundSize = "25% 70%";
+        searchButton.style.backgroundSize = "15% 70%";
         searchButton.style.backgroundRepeat = "no-repeat";
         
         // div to contain input box and search button
