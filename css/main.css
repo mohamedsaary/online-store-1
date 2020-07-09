@@ -57,6 +57,7 @@ header .search {
     justify-self: center;
     width: 16px;
     height: 16px;
+    cursor: pointer;
 }
 
 header .user {
@@ -65,6 +66,7 @@ header .user {
     justify-self: center;
     width: 16px;
     height: 16px;
+    cursor: pointer;
 }
 
 header .basket {
@@ -73,6 +75,7 @@ header .basket {
     justify-self: center;
     width: 16px;
     height: 16px;
+    cursor: pointer;
 }
 
 .nav-sidebar {
@@ -81,7 +84,7 @@ header .basket {
   bottom: 0;
   padding: 0 5px;
   width: fit-content;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 50px);
   background-color: #111;
   z-index: 1000;
 
@@ -157,7 +160,7 @@ footer .footer-block ul li {
 
 footer .footer-block ul li a {
     text-decoration: none;
-    text-align: left;
+    text-align: center;
     display: block;
     color: 	#DCDCDC;
     font-size: 12px;
@@ -168,6 +171,7 @@ footer .footer-block p {
     font-size: 12px;
     padding: 5px;
     display: none;
+    text-align: center;
 }
 
 footer .about-us {
@@ -318,10 +322,16 @@ footer .footer-sm-links a img {
 
     footer .footer-block ul li {
         font-size: 12px;
+        
+    }
+
+    footer .footer-block ul li a {
+        text-align: left;
     }
 
     footer .footer-block p {
         display: block;
+        text-align: left;
     }
 
     footer .about-us, footer .help, footer .contact, footer .featured {
